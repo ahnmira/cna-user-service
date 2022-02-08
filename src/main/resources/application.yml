@@ -1,7 +1,17 @@
 spring:
   application:
     name: user-service
-
+  datasource:
+    url: jdbc:h2:mem:userdb #데이터베이스를 h2로 사용하고 인메모리에서만 동작하게 하기 위한 설정도 추가
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+      path: /h2-console
+      
 server:
   port: 9001
 

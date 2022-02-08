@@ -11,7 +11,7 @@ import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
-public class UserService implements com.example.rest.service.UserService {
+public class UserServiceLogic implements com.example.rest.service.UserService {
 
 	private final UserStore userStore;
 	
@@ -34,6 +34,17 @@ public class UserService implements com.example.rest.service.UserService {
 
 	@Override
 	public User find(String id) {
+//        User userOptional = userRepository.findById(id)
+//                .orElseThrow(RuntimeException::new);
+//
+//        // Rest Template or Feign Client 작업 처리
+//
+//        return UserResponseData.builder()
+//                .userId(userOptional.getId())
+//                .username(userOptional.getUsername())
+//                .team(null)
+//                .build();
+		
 		return this.userStore.retrieve(id);
 	}
 

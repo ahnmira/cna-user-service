@@ -9,6 +9,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
+//@Entity(name = "users")
 public class User {
 	private String id;
 	private String name;
