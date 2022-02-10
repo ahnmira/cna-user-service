@@ -10,5 +10,6 @@ public interface UserService {
 	void remove(String id);
 	
 	User find(String id);
+	//UserResponseData getUserById(String id); 
 	List<User> findAll();
 }

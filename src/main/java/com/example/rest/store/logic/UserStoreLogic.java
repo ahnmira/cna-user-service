@@ -18,6 +18,7 @@ public class UserStoreLogic implements UserStore {
 	public UserStoreLogic() {
 		this.userMap = new HashMap<>();
 	}
+	
 	@Override
 	public String create(User newUser) {
 		this.userMap.put(newUser.getId(), newUser);

@@ -2,6 +2,7 @@ package com.example.rest.entity;
 
 import java.util.UUID;
 
+import com.example.rest.dto.ResponseInfo;
 import com.google.gson.Gson;
 
 import lombok.Getter;
@@ -14,6 +15,7 @@ public class User {
 	private String id;
 	private String name;
 	private String email;
+	private ResponseInfo teamInfo;
 	
 	public User() {
 		this.id=UUID.randomUUID().toString();
