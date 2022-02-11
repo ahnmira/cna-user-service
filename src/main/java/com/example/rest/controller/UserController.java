@@ -22,7 +22,6 @@ public class UserController {
 
 	@PostMapping("/users")
 	public String register(@RequestBody User newUser) {
-		System.out.println("감사합니다.");
 		return userService.register(newUser);
 	}
 	
